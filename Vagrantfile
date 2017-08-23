@@ -15,4 +15,10 @@ Vagrant.configure("2") do |config|
     server3.vm.network "private_network", ip: "192.168.50.12"
   end
 
+  config.vm.define "mysql" do |mysql|
+    mysql.vm.box = "ubuntu/trusty64"
+    mysql.vm.network "private_network", ip: "192.168.50.13"
+  end
+
 end
+
